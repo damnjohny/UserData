@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class AddServlet extends HttpServlet {
+
+    public boolean CONTAINS_USER = false;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/add.jsp");
@@ -22,7 +25,11 @@ public class AddServlet extends HttpServlet {
         String name = req.getParameter("name");
         String password = req.getParameter("pass");
 
-        DataBase.addNewUser(name, password);
+        if (!DataBase.containsUser(name)) {
+            DataBase.addNewUser(name, password);
+            CONTAINS_USER = true;
+        }
+
 
         req.setAttribute("userName", name);
         doGet(req, resp);

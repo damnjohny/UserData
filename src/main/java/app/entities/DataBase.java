@@ -94,4 +94,16 @@ public class DataBase {
             e.printStackTrace();
         }
     }
+
+    public static boolean containsUser(String username){
+        Connection connection = getDBConnection();
+        try {
+            Statement statement = connection.createStatement();
+            String SQL = "SELECT username FROM users WHERE username=" + "'" + username +  "'";
+            return statement.execute(SQL);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

@@ -21,6 +21,7 @@
         <h3> <button class="w3-btn w3-hover-light-blue w3-round-large" onclick="location.href='/list'"> SHOW LIST OF USERS</button> </h3>
         <h3> <button class="w3-btn w3-hover-light-blue w3-round-large" onclick="location.href='/add'">ADD NEW USER</button> </h3>
         <h3> <button class="w3-btn w3-hover-light-blue w3-round-large" onclick="location.href='/edit'">EDIT USER DATA</button> </h3>
+        <h3> <button class="w3-btn w3-hover-light-blue w3-round-large" onclick="location.href='/info'">CONTACT INFO</button> </h3>
     </div>
 </div>
 

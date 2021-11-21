@@ -12,7 +12,6 @@ public class DeleteUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/delete_user.jsp");
         requestDispatcher.forward(req, resp);
-
     }
 
     @Override

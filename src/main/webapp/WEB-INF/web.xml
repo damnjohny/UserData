@@ -64,4 +64,14 @@
         <url-pattern>/delete_all</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ContactInfo</servlet-name>
+        <servlet-class>app.servlets.ContactInfo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContactInfo</servlet-name>
+        <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+
 </web-app>
